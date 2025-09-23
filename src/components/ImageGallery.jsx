@@ -38,17 +38,17 @@ const ImageGallery = ({ images, title }) => {
           <>
             <button
               onClick={goToPrevious}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-stone-900/50 backdrop-blur-sm text-white p-2 rounded-full hover:bg-stone-900/70 transition-all duration-300"
               aria-label="Previous image"
             >
-              ←
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-stone-900/50 backdrop-blur-sm text-white p-2 rounded-full hover:bg-stone-900/70 transition-all duration-300"
               aria-label="Next image"
             >
-              →
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </button>
           </>
         )}

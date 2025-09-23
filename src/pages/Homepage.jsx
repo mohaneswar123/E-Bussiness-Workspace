@@ -6,6 +6,13 @@ import CartNotification from '../components/CartNotification';
 import RegistrationForm from '../components/RegistrationForm';
 import { booksData } from '../data/booksData';
 
+// This is a refactored version of the Homepage component with a new "Scholarly & Warm" theme.
+// Theme highlights:
+// - Color Palette: Warm tones using Tailwind's `stone` and `amber` colors.
+// - Typography: Introduces 'Playfair Display' for an elegant, classic feel on the main header.
+// - Styling: Uses gradients, softer shadows, and refined borders for a more premium look.
+// - No functionality has been changed.
+
 const Homepage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -36,17 +43,17 @@ const Homepage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50/30">
+    <div className="min-h-screen bg-stone-50 text-stone-800">
       {/* Header */}
-      <header className="bg-white/70 backdrop-blur-xl border-b border-gray-100/50 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
+      <header className="bg-stone-50/80 backdrop-blur-lg border-b border-stone-200/60 sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             <div className="text-center sm:text-left flex-1">
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-light text-gray-800 mb-1 font-['Poppins',_sans-serif]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-stone-900 font-['Playfair_Display',_serif]">
                 InkɅura
               </h1>
-              <p className="text-sm sm:text-base text-gray-500 font-light font-['Lato',_sans-serif]">
-                Curated collection for every person
+              <p className="text-sm sm:text-base text-stone-500 font-light font-['Lato',_sans-serif] mt-1">
+                Curated collections for the discerning reader.
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -56,15 +63,13 @@ const Homepage = () => {
         </div>
       </header>
 
-
-
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+      <main className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
         {/* Stats and Filter */}
-        <div className="text-center mb-8">
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100/50">
-            <p className="text-gray-500 mb-4 text-sm font-light font-['Lato',_sans-serif]">
-              Explore our collection of <span className="font-medium text-gray-700">{booksData.length}</span> carefully selected items
+        <div className="text-center mb-10">
+          <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-stone-200/50">
+            <p className="text-stone-600 mb-5 text-base font-light font-['Lato',_sans-serif]">
+              Explore our library of <span className="font-medium text-stone-800">{booksData.length}</span> hand-picked titles.
             </p>
             
             {/* Category Filter */}
@@ -73,15 +78,15 @@ const Homepage = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-500 font-['Montserrat',_sans-serif] ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 font-['Montserrat',_sans-serif] ${
                     selectedCategory === category
-                      ? 'bg-gradient-to-r from-lavender-100 to-lavender-200 text-lavender-700 shadow-lg shadow-lavender-200/30'
-                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200/50 hover:border-lavender-200 shadow-sm'
+                      ? 'bg-gradient-to-r from-stone-800 to-stone-900 text-white shadow-lg shadow-stone-800/20 transform scale-105'
+                      : 'bg-white/80 text-stone-700 hover:bg-stone-100/80 border border-stone-200/70 hover:border-stone-400 shadow-sm'
                   }`}
                 >
                   {category}
                   {category !== 'All' && (
-                    <span className="ml-1 text-xs opacity-75">
+                    <span className="ml-1.5 text-xs opacity-60">
                       ({booksData.filter(book => book.category === category).length})
                     </span>
                   )}
@@ -91,8 +96,8 @@ const Homepage = () => {
             
             {/* Results count */}
             {selectedCategory !== 'All' && (
-              <p className="text-gray-400 text-sm mt-6 font-light font-['Lato',_sans-serif]">
-                {filteredBooks.length} item{filteredBooks.length !== 1 ? 's' : ''} in {selectedCategory}
+              <p className="text-stone-500 text-sm mt-6 font-light font-['Lato',_sans-serif]">
+                Showing {filteredBooks.length} title{filteredBooks.length !== 1 ? 's' : ''} in "{selectedCategory}"
               </p>
             )}
           </div>
@@ -108,19 +113,19 @@ const Homepage = () => {
         {/* Empty state (if no books in selected category) */}
         {filteredBooks.length === 0 && (
           <div className="text-center py-16 sm:py-20">
-            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 sm:p-16 shadow-sm border border-gray-100/50 max-w-md mx-auto">
-              <div className="text-6xl sm:text-8xl mb-8 opacity-30">📚</div>
-              <h3 className="text-xl sm:text-2xl font-light text-gray-700 mb-6 font-['Poppins',_sans-serif]">
-                No items in {selectedCategory}
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 sm:p-16 shadow-sm border border-stone-200/50 max-w-md mx-auto">
+              <div className="text-7xl sm:text-8xl mb-8 opacity-40">✒️</div>
+              <h3 className="text-xl sm:text-2xl font-light text-stone-800 mb-4 font-['Poppins',_sans-serif]">
+                No titles in {selectedCategory}
               </h3>
-              <p className="text-gray-500 mb-8 text-sm sm:text-base font-light font-['Lato',_sans-serif]">
-                Explore other categories or check back soon for new additions
+              <p className="text-stone-500 mb-8 text-sm sm:text-base font-light font-['Lato',_sans-serif]">
+                Perhaps try another category or check back soon for new additions.
               </p>
               <button
                 onClick={() => setSelectedCategory('All')}
-                className="px-8 py-4 bg-gradient-to-r from-peach-100 to-peach-200 text-peach-700 rounded-2xl font-medium hover:from-peach-200 hover:to-peach-300 transition-all duration-300 shadow-lg shadow-peach-200/30 font-['Montserrat',_sans-serif]"
+                className="px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-2xl font-medium hover:from-amber-600 hover:to-amber-700 transition-all duration-300 shadow-lg shadow-amber-500/40 transform hover:scale-105 font-['Montserrat',_sans-serif]"
               >
-                View All Items
+                Browse All Titles
               </button>
             </div>
           </div>
@@ -147,14 +152,19 @@ const Homepage = () => {
         singleItem={selectedBookForPurchase}
       />
 
-      {/* Footer
-      <footer className="bg-white/50 border-t border-gray-100/50 mt-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-          <div className="text-center text-gray-400">
-            <p className="font-light font-['Lato',_sans-serif]">&copy; 2024 InkɅura. All rights reserved.</p>
+      {/* Decorative Divider */}
+      <div className="max-w-3xl mx-auto px-6 lg:px-8 mt-20">
+        <hr className="border-t border-stone-200/80" />
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-transparent mt-12 pb-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center text-stone-500">
+            <p className="font-light text-sm font-['Lato',_sans-serif]">&copy; 2024 InkɅura. All rights reserved.</p>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 };

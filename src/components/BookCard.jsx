@@ -63,25 +63,26 @@ const BookCard = ({ book, onAddToCart, onBuyNow }) => {
         {/* Buy Now Button */}
         <button
           onClick={handleBuyNow}
-          className="w-full bg-gradient-to-r from-orange-400 to-pink-400 hover:from-orange-500 hover:to-pink-500 text-white py-3.5 px-4 rounded-2xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-300/40 flex items-center justify-center space-x-2 font-['Lato',_sans-serif]"
+          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white py-3.5 px-6 rounded-lg font-semibold text-base hover:from-amber-600 hover:to-amber-700 transition-transform duration-300 transform hover:scale-105 shadow-lg shadow-amber-500/30 font-['Montserrat',_sans-serif]"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
           <span>Buy Now</span>
         </button>
-        
+
         {/* Add to Cart Button */}
         <button
           onClick={handleAddToCart}
-          className="w-full bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-500 hover:to-teal-500 text-white py-3.5 px-4 rounded-2xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-emerald-300/40 flex items-center justify-center space-x-2 font-['Lato',_sans-serif]"
+          className="w-full flex items-center justify-center gap-2 bg-stone-800 text-white py-3.5 px-6 rounded-lg font-semibold text-base hover:bg-stone-900 transition-transform duration-300 transform hover:scale-105 font-['Montserrat',_sans-serif]"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m4.5-5a2 2 0 11-4 0 2 2 0 014 0zm6 0a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
           <span>Add to Cart</span>
         </button>
       </div>
+
     </div>
   );
 };

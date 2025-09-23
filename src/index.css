@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import "./styles/pastel-theme.css";
 
+/* Animation for the cart icon badge */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.animate-pop {
+  animation: pop 0.3s ease-in-out;
+}
+
 /* Custom utilities for better text handling */
 .line-clamp-2 {
   display: -webkit-box;
