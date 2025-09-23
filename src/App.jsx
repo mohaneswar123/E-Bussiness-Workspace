@@ -8,7 +8,7 @@ function App() {
   return (
     <CartProvider>
       {/* 👇 Add basename for GitHub Pages */}
-      <Router basename="/E-Bussiness-Workspace">
+      <Router basename={process.env.NODE_ENV === "production" ? "/E-Bussiness-Workspace" : "/"}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/book/:id" element={<BookDetails />} />
