@@ -1,0 +1,125 @@
+/* Custom Pastel Colors for Minimalist Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Lato:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Peach Colors */
+  --peach-50: #fef7f3;
+  --peach-100: #fee8db;
+  --peach-200: #fdc9b4;
+  --peach-300: #fba483;
+  --peach-400: #f87c56;
+  --peach-500: #f4623a;
+  --peach-600: #e5502e;
+  --peach-700: #c1412a;
+  --peach-800: #9a3a2a;
+  --peach-900: #7c3426;
+
+  /* Mint Colors */
+  --mint-50: #f0fdf9;
+  --mint-100: #ccfbef;
+  --mint-200: #99f6e0;
+  --mint-300: #5eead4;
+  --mint-400: #2dd4bf;
+  --mint-500: #14b8a6;
+  --mint-600: #0d9488;
+  --mint-700: #0f766e;
+  --mint-800: #115e59;
+  --mint-900: #134e4a;
+
+  /* Lavender Colors */
+  --lavender-50: #faf5ff;
+  --lavender-100: #f3e8ff;
+  --lavender-200: #e9d5ff;
+  --lavender-300: #d8b4fe;
+  --lavender-400: #c084fc;
+  --lavender-500: #a855f7;
+  --lavender-600: #9333ea;
+  --lavender-700: #7c3aed;
+  --lavender-800: #6b21a8;
+  --lavender-900: #581c87;
+}
+
+/* Peach utility classes */
+.bg-peach-50 { background-color: var(--peach-50); }
+.bg-peach-100 { background-color: var(--peach-100); }
+.bg-peach-200 { background-color: var(--peach-200); }
+.bg-peach-300 { background-color: var(--peach-300); }
+.text-peach-700 { color: var(--peach-700); }
+.border-peach-100 { border-color: var(--peach-100); }
+.shadow-peach-200\/30 { box-shadow: 0 10px 15px -3px rgb(253 201 180 / 0.3), 0 4px 6px -2px rgb(253 201 180 / 0.3); }
+
+.from-peach-50 { --tw-gradient-from: var(--peach-50); }
+.from-peach-100 { --tw-gradient-from: var(--peach-100); }
+.from-peach-200 { --tw-gradient-from: var(--peach-200); }
+.to-peach-50 { --tw-gradient-to: var(--peach-50); }
+.to-peach-100 { --tw-gradient-to: var(--peach-100); }
+.to-peach-200 { --tw-gradient-to: var(--peach-200); }
+.to-peach-300 { --tw-gradient-to: var(--peach-300); }
+.hover\:from-peach-200:hover { --tw-gradient-from: var(--peach-200); }
+.hover\:from-peach-300:hover { --tw-gradient-from: var(--peach-300); }
+.hover\:to-peach-200:hover { --tw-gradient-to: var(--peach-200); }
+.hover\:to-peach-300:hover { --tw-gradient-to: var(--peach-300); }
+
+/* Mint utility classes */
+.bg-mint-50 { background-color: var(--mint-50); }
+.bg-mint-100 { background-color: var(--mint-100); }
+.bg-mint-200 { background-color: var(--mint-200); }
+.bg-mint-300 { background-color: var(--mint-300); }
+.text-mint-700 { color: var(--mint-700); }
+.border-mint-100 { border-color: var(--mint-100); }
+.shadow-mint-200\/30 { box-shadow: 0 10px 15px -3px rgb(153 246 224 / 0.3), 0 4px 6px -2px rgb(153 246 224 / 0.3); }
+
+.from-mint-50 { --tw-gradient-from: var(--mint-50); }
+.from-mint-100 { --tw-gradient-from: var(--mint-100); }
+.from-mint-200 { --tw-gradient-from: var(--mint-200); }
+.to-mint-50 { --tw-gradient-to: var(--mint-50); }
+.to-mint-100 { --tw-gradient-to: var(--mint-100); }
+.to-mint-200 { --tw-gradient-to: var(--mint-200); }
+.to-mint-300 { --tw-gradient-to: var(--mint-300); }
+.hover\:from-mint-200:hover { --tw-gradient-from: var(--mint-200); }
+.hover\:from-mint-300:hover { --tw-gradient-from: var(--mint-300); }
+.hover\:to-mint-200:hover { --tw-gradient-to: var(--mint-200); }
+.hover\:to-mint-300:hover { --tw-gradient-to: var(--mint-300); }
+
+/* Lavender utility classes */
+.bg-lavender-50 { background-color: var(--lavender-50); }
+.bg-lavender-100 { background-color: var(--lavender-100); }
+.bg-lavender-200 { background-color: var(--lavender-200); }
+.bg-lavender-300 { background-color: var(--lavender-300); }
+.text-lavender-700 { color: var(--lavender-700); }
+.border-lavender-100 { border-color: var(--lavender-100); }
+.border-lavender-200 { border-color: var(--lavender-200); }
+.shadow-lavender-200\/30 { box-shadow: 0 10px 15px -3px rgb(233 213 255 / 0.3), 0 4px 6px -2px rgb(233 213 255 / 0.3); }
+
+.from-lavender-50 { --tw-gradient-from: var(--lavender-50); }
+.from-lavender-100 { --tw-gradient-from: var(--lavender-100); }
+.from-lavender-200 { --tw-gradient-from: var(--lavender-200); }
+.to-lavender-50 { --tw-gradient-to: var(--lavender-50); }
+.to-lavender-100 { --tw-gradient-to: var(--lavender-100); }
+.to-lavender-200 { --tw-gradient-to: var(--lavender-200); }
+.to-lavender-300 { --tw-gradient-to: var(--lavender-300); }
+.hover\:from-lavender-200:hover { --tw-gradient-from: var(--lavender-200); }
+.hover\:from-lavender-300:hover { --tw-gradient-from: var(--lavender-300); }
+.hover\:to-lavender-200:hover { --tw-gradient-to: var(--lavender-200); }
+.hover\:to-lavender-300:hover { --tw-gradient-to: var(--lavender-300); }
+
+/* Typography improvements */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-body {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-accent {
+  font-family: 'Montserrat', sans-serif;
+}
