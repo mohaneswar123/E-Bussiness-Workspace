@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: '/e-bussiness/'
+  base: '/E-Bussiness-Workspace/'
 })
