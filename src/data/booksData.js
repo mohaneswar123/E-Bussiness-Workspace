@@ -1,12 +1,12 @@
-// booksData.js
-// Import all images
-import engCover1 from "./assets/eng-cover-color-1.png";
-import engCover2 from "./assets/eng-cover-color-2.png";
-import engCover3 from "./assets/eng-cover-color-3.png";
-import engCover4 from "./assets/eng-cover-color-4.png";
-import engCover5 from "./assets/eng-cover-color-5.png";
+// booksData.js (inside src/data/)
 
-// Books data
+// go up one level from data/ → back to src/, then into assets/
+import engCover1 from "../assets/eng-cover-color-1.png";
+import engCover2 from "../assets/eng-cover-color-2.png";
+import engCover3 from "../assets/eng-cover-color-3.png";
+import engCover4 from "../assets/eng-cover-color-4.png";
+import engCover5 from "../assets/eng-cover-color-5.png";
+
 export const booksData = [
   {
     id: 1,
