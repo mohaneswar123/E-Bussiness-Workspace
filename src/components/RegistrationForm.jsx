@@ -101,7 +101,7 @@ const RegistrationForm = ({ isOpen, onClose, cartItems, singleItem }) => {
         setFormData({ name: '', phone: '', items: '' });
         setSubmitStatus(null);
         onClose();
-      }, 2000);
+      }, 4000);
 
     } catch (error) {
       console.error('Error submitting form:', error);
