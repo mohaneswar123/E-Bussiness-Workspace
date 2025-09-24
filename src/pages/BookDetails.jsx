@@ -133,7 +133,7 @@ const BookDetails = () => {
                     onClick={handleBuyNow}
                     className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-3 px-6 rounded-lg font-semibold text-base hover:from-amber-600 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-amber-500/30 font-['Montserrat',_sans-serif]"
                   >
-                    Buy Now
+                    Order Now
                   </button>
 
                   <button
