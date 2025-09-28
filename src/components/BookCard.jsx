@@ -41,7 +41,7 @@ const BookCard = ({ book, onAddToCart, onBuyNow }) => {
           </h3>
           <div className="flex justify-between items-center">
             <span className="text-2xl font-light text-gray-700 font-['Montserrat',_sans-serif]">
-              ${book.price}
+              ₹{book.price}
             </span>
             <span className="text-xs font-medium text-purple-600 bg-gradient-to-r from-purple-100 to-indigo-100 px-3 py-1.5 rounded-full border border-purple-200">
               {book.category}
